@@ -5,7 +5,7 @@ package arreglopersonas;
  */
 public class App {
 
-    public static void main(String... args) {
+    public static Persona[] getArregloPersonas() {
         Persona p1 = new Persona();
         p1.setEdad(10);
         p1.setNombre("Mario");
@@ -33,5 +33,11 @@ public class App {
             System.out.println("La edad es :" + p.getEdad());
             System.out.println("EL nombre es " + p.getNombre());
         }
+
+        return arr;
+    }
+
+    public static void main(String... args) {
+        getArregloPersonas();
     }
 }
