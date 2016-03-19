@@ -7,12 +7,12 @@ public interface IntegrantesService {
 
     Integrante[] creaIntegrantes();
 
-    Integrante getIntegranteMayorEdad();
+    Integrante getIntegranteMayorEdad(Integrante[] integrantes);
 
-    Integrante getIntegranteNombreMasLargo();
+    Integrante getIntegranteNombreMasLargo(Integrante[] integrantes);
 
-    void showIntegrantes();
+    void showIntegrantes(Integrante[] integrantes);
 
-    int getSumaEdad();
+    int getSumaEdad(Integrante[] integrantes);
 
 }

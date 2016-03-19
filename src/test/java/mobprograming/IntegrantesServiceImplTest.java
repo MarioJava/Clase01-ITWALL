@@ -21,6 +21,8 @@ public class IntegrantesServiceImplTest {
 
     @Test
     public void deberiaObtenerIntegrantes() {
+        System.out.println();
+        System.out.println("deberiaObtenerIntegrantes");
 
         Integrante[] integrantes = service.creaIntegrantes();
 
@@ -34,7 +36,10 @@ public class IntegrantesServiceImplTest {
     @Test
     public void deberiaEntregarIntegranteMayorEdad() {
 
-        Integrante integranteMayorEdad = service.getIntegranteMayorEdad();
+        System.out.println();
+        System.out.println("deberiaEntregarIntegranteMayorEdad");
+
+        Integrante integranteMayorEdad = service.getIntegranteMayorEdad(service.creaIntegrantes());
 
         assertNotNull(integranteMayorEdad);
 
@@ -46,7 +51,10 @@ public class IntegrantesServiceImplTest {
     @Test
     public void deberiaEntregarIntegranteNombreMasLargo() {
 
-        Integrante integranteNombreMasLargo = service.getIntegranteNombreMasLargo();
+        System.out.println();
+        System.out.println("deberiaEntregarIntegranteNombreMasLargo");
+
+        Integrante integranteNombreMasLargo = service.getIntegranteNombreMasLargo(service.creaIntegrantes());
 
         assertNotNull(integranteNombreMasLargo);
         System.out.println();
@@ -57,20 +65,27 @@ public class IntegrantesServiceImplTest {
     @Test
     public void deberiaListarTodosLosIntegrantes() {
 
+        System.out.println();
+        System.out.println("deberiaListarTodosLosIntegrantes");
+
         Integrante[] integrantes = service.creaIntegrantes();
 
+        assertNotNull(integrantes);
+
         System.out.println();
-        service.showIntegrantes();
+        service.showIntegrantes(integrantes);
         System.out.println();
 
-        assertNotNull(integrantes);
 
     }
 
     @Test
     public void deberiaEntregarLaSumaDeLAsEdades() {
 
-        int sumaEdad = service.getSumaEdad();
+        System.out.println();
+        System.out.println("deberiaEntregarLaSumaDeLAsEdades");
+
+        int sumaEdad = service.getSumaEdad(service.creaIntegrantes());
 
         System.out.println();
         System.out.println("La suma de las edades es : " + sumaEdad);

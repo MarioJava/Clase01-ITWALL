@@ -24,8 +24,8 @@ public class IntegratesServiceImpl implements IntegrantesService {
         return integrantes;
     }
 
-    public Integrante getIntegranteMayorEdad() {
-        Integrante[] integrantes = creaIntegrantes();
+    public Integrante getIntegranteMayorEdad(Integrante[] integrantes) {
+
         Integrante integranteMayorEdad = null;
 
         int mayorEdad = 0;
@@ -39,8 +39,8 @@ public class IntegratesServiceImpl implements IntegrantesService {
         return integranteMayorEdad;
     }
 
-    public Integrante getIntegranteNombreMasLargo() {
-        Integrante[] integrantes = creaIntegrantes();
+    public Integrante getIntegranteNombreMasLargo(Integrante[] integrantes) {
+
         Integrante integranteNombreMasLargo = null;
 
         int largoMax = 0;
@@ -54,16 +54,15 @@ public class IntegratesServiceImpl implements IntegrantesService {
         return integranteNombreMasLargo;
     }
 
-    public void showIntegrantes() {
-        Integrante[] integrantes = creaIntegrantes();
+    public void showIntegrantes(Integrante[] integrantes) {
 
         for (Integrante integrante : integrantes) {
             System.out.println(integrante.toString());
         }
     }
 
-    public int getSumaEdad() {
-        Integrante[] integrantes = creaIntegrantes();
+    public int getSumaEdad(Integrante[] integrantes) {
+
         int sumaEdad = 0;
 
         for (Integrante integrante : integrantes) {
